@@ -1,0 +1,206 @@
+1. On command terminal open mongo db
+	
+	mongo
+
+2.  Create parking DB
+
+	use parking_db
+
+
+3. Create the collections
+	db.createCollection('parking_lot')
+	
+	db.createCollection('parking_spot')
+	
+	
+	
+4. Populate the parking lot collection
+
+	db.parking_lot.insertMany([
+		{
+			"name": "Parklands Baptist",
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"name": "Safaricom Hq",
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"name": "West-End",
+			"created_at": Date(),
+			"updated_at": Date()
+		}
+	])
+	
+5. Populate the parking spots
+
+	db.parking_spot.insertMany([
+		{
+			"spot_name": "A1",
+			"access_type": "public",
+			"cost": 200,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "Parklands Baptist"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"spot_name": "A2",
+			"access_type": "public",
+			"cost": 200,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "Parklands Baptist"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"spot_name": "B1",
+			"access_type": "public",
+			"cost": 200,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "Parklands Baptist"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"spot_name": "B2",
+			"access_type": "public",
+			"cost": 200,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "Parklands Baptist"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"spot_name": "HQ1-A1",
+			"access_type": "private",
+			"cost": 50,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "Safaricom Hq"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"spot_name": "HQ1-A2",
+			"access_type": "private",
+			"cost": 50,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "Safaricom Hq"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"spot_name": "HQ2-C1",
+			"access_type": "private",
+			"cost": 50,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "Safaricom Hq"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"spot_name": "HQ2-C2",
+			"access_type": "private",
+			"cost": 50,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "Safaricom Hq"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"spot_name": "BSMT-1",
+			"access_type": "private",
+			"cost": 50,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "West-End"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"spot_name": "BSMT-2",
+			"access_type": "private",
+			"cost": 50,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "West-End"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"spot_name": "PUB-1",
+			"access_type": "public",
+			"cost": 200,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "West-End"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		},
+		{
+			"spot_name": "PUB-1",
+			"access_type": "public",
+			"cost": 200,
+			"available": true,
+			"time_in": null,
+			"time_in": null,
+			"lot" : {
+				"name": "West-End"
+			},		
+			"created_at": Date(),
+			"updated_at": Date()
+		}
+	])
+	
+	
+6. Confirm the documents are created
+	
+	db.parking_lot.find()
+	db.parking_spot.find()
+
+	
+	
+
