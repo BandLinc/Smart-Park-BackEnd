@@ -8,6 +8,8 @@ const url = 'mongodb://smartpark:test2020@ds155461.mlab.com:55461/heroku_qjr222t
 
 const app = express();
 
+app.use(cors())
+
 //connect app with database
 mongoose.connect(url, { useNewUrlParser: true })
 
