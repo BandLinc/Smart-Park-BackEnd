@@ -45,6 +45,9 @@ app.use('/packinglot',packinglotRouter)
 const packingspotRouter=require('./routes/parkingSpot')
 app.use('/packingspot',packingspotRouter)
 
+const packvehicleRouter=require('./routes/packedVehicles')
+app.use('/packedvehicles',packvehicleRouter)
+
 
 module.exports = app;
 
