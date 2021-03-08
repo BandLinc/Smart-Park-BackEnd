@@ -12,7 +12,7 @@ mongoose.connect(url, { useNewUrlParser: true })
 const con=mongoose.connection
 
 con.on('open',()=>{
-    console.log('Connected..')
+    console.log('Connected Successfully..')
 })
 
 app.use(express.json())
